@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server'
 import OpenAI from 'openai'
 
-// 增加超时时间
-export const maxDuration = 300 // 增加到5分钟
+// 设置超时时间为60秒（Vercel Hobby计划的最大限制）
+export const maxDuration = 60
 
 const openai = new OpenAI({
   apiKey: process.env.DEEPSEEK_API_KEY,
