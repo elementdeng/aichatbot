@@ -6,9 +6,6 @@ const nextConfig = {
     // 临时禁用类型检查以允许部署
     ignoreBuildErrors: true
   },
-  experimental: {
-    serverActions: true,
-  },
   async headers() {
     return [
       {
@@ -29,6 +26,12 @@ const nextConfig = {
   // 确保正确处理静态资源
   images: {
     unoptimized: true
+  },
+  // 配置函数超时时间
+  functions: {
+    'api/chat': {
+      maxDuration: 60
+    }
   }
 }
 
