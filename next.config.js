@@ -29,10 +29,7 @@ const nextConfig = {
   // 确保正确处理静态资源
   images: {
     unoptimized: true
-  },
-  serverRuntimeConfig: {
-    maxDuration: 60,
-  },
+  }
 }
 
 module.exports = nextConfig 
